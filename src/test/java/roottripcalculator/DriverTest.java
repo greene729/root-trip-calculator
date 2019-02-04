@@ -7,12 +7,23 @@ import org.junit.Test;
 public class DriverTest {
 	
 	@Test
-	public void shouldHaveName() {
+	public void driverShouldHaveName() {
 		
-		Driver underTest = new Driver("New Driver");
+		Driver underTest = new Driver("foo");
 		String name = underTest.getName();
-		assertEquals("New Driver", name);
+		assertEquals("foo", name);
 		
 	}
+	
+	@Test
+	public void newDriverShouldHaveZeroDistanceTravelled() {
+		
+		Driver underTest = new Driver("foo");
+		Double distance = underTest.getDistanceTravelled();
+		assertEquals(0.0, distance, 0.001);
+		
+	}
+	
+	
 
 }
