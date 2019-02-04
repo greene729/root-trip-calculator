@@ -15,7 +15,7 @@ public class Trip {
 		
 	}
 	
-	private void calculateTripDuration() {
+	public void calculateTripDuration() {
 	
 		Double startTimeAsMinutes = convertTimeStringToMinutes(startTime);
 		Double endTimeAsMinutes = convertTimeStringToMinutes(endTime);
@@ -55,7 +55,6 @@ public class Trip {
 	}
 
 	public Double getTripDuration() {
-		calculateTripDuration();
 		return tripDuration;
 	}
 

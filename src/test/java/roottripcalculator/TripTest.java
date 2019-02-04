@@ -34,9 +34,10 @@ public class TripTest {
 	}
 	
 	@Test
-	public void tripShouldHaveCalculateTripDuration() {
+	public void tripShouldCalculateTripDuration() {
 		
 		Trip underTest = new Trip("", "00:15", "01:05");
+		underTest.calculateTripDuration();
 		Double tripDuration = underTest.getTripDuration();
 		assertEquals(0.83333, tripDuration, 0.001);
 		
