@@ -6,12 +6,15 @@ public class Trip {
 	private String startTime;
 	private String endTime;
 	private Double tripDuration;
+	private Double distance;
+	private Double averageSpeed;
 	
-	public Trip(String driverName, String startTime, String endTime) {
+	public Trip(String driverName, String startTime, String endTime, Double distance) {
 		
 		this.driverName = driverName;
 		this.startTime = startTime;
 		this.endTime = endTime;
+		this.distance = distance;
 		
 	}
 	
@@ -22,6 +25,13 @@ public class Trip {
 		Double calculatedTripDuration = endTimeAsMinutes - startTimeAsMinutes;		
 		
 		tripDuration = calculatedTripDuration;
+		
+	}
+
+	public void calculateAverageSpeed() {
+		
+		calculateTripDuration();		
+		averageSpeed = distance / tripDuration;
 		
 	}
 	
@@ -37,8 +47,6 @@ public class Trip {
 		return convertedTripDuration;
 		
 	}
-
-
 
 	// Just some getters
 
@@ -57,5 +65,14 @@ public class Trip {
 	public Double getTripDuration() {
 		return tripDuration;
 	}
+
+	public Double getDistance() {
+		return distance;
+	}
+
+	public Double getAverageSpeed() {
+		return averageSpeed;
+	}
+
 
 }
