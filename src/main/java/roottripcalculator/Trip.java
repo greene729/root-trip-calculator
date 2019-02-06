@@ -2,16 +2,14 @@ package roottripcalculator;
 
 public class Trip {
 	
-	private String driverName;
 	private String startTime;
 	private String endTime;
 	private Double tripDuration;
 	private Double distance;
 	private Double averageSpeed;
 	
-	public Trip(String driverName, String startTime, String endTime, Double distance) {
+	public Trip(String startTime, String endTime, Double distance) {
 		
-		this.driverName = driverName;
 		this.startTime = startTime;
 		this.endTime = endTime;
 		this.distance = distance;
@@ -49,10 +47,6 @@ public class Trip {
 	}
 
 	// Just some getters
-
-	public String getDriverName() {
-		return driverName;
-	}
 
 	public String getStartTime() {
 		return startTime;
