@@ -1,10 +1,10 @@
 package roottripcalculator;
 
-import static org.junit.Assert.assertEquals;
-import static org.hamcrest.Matchers.contains;
-import static org.hamcrest.MatcherAssert.assertThat;
-
 import org.junit.Test;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.contains;
+import static org.junit.Assert.assertEquals;
 
 public class DriverTest {
 	
@@ -30,7 +30,7 @@ public class DriverTest {
 	public void shouldBeAbleToAddTripsToDriver() {
 		
 		Driver underTest =  new Driver("foo");
-		Trip testTrip = new Trip("", "", 50.2);
+		Trip testTrip = new Trip("00:01", "23:59", 50.2);
 		underTest.addNewTrip(testTrip);
 		assertThat(underTest.getTrips(), contains(testTrip));
 		
